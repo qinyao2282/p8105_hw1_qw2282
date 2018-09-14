@@ -5,13 +5,10 @@ output: github_document
 
 # Problem 1
 
-```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = TRUE)
-```
-
 Generate a uniform distribution from 0 to 5. 
 
 ```{r}
+set.seed(1)
 rand_samp = runif(10, min = 0, max = 5)
 rand_samp
 
@@ -31,20 +28,23 @@ The mean of the logical vector is `r mean(rand_samp_greater_than_2)`.
 Generate a character vector, which includes ten elements.
 ```{r}
 rand_char = c("My", "name", "is", "Qinyao", "how", "are", "you", "nice", "weather", "today")
-
+length(rand_char)
 ```
 
 The mean of the character vector is `r mean(rand_char)`.
 
-
 ```{r}
 rand_factor = factor(c("january", "february", "march", "april", "may", "june", "july", "august", "semptember", "october"))
-rand_factor
-
+length(rand_factor)
 ```
 
-```{r}
+The mean of the character vector is `r mean(rand_factor)`.
 
-```
+Vectors of numerical values and logicals have means while the vectors of characters and factors do not have means. This is because the numerical values can be averaged into a numerical mean. And logicals, TRUEs and FALSEs, are also stored as integers. TRUEs are stored as 1s and FALSEs are stored as 0. So when the mean function is called, the mean can be calculated with either 0 or 1. However, characters and factors are strings that do not have a numerical mean.
+
+#Problem 2
+
+
+
 
 
