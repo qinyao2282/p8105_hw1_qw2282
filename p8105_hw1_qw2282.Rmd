@@ -9,12 +9,41 @@ output: github_document
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
+Generate a uniform distribution from 0 to 5. 
+
 ```{r}
 rand_samp = runif(10, min = 0, max = 5)
 rand_samp
 
-rand_samp_greter_than_2 = rand_samp > 2
-rand_samp_greter_than_2
+```
+
+The mean of the sample is `r mean(rand_samp)`.
+
+Generate a logical vector, which indicates whether the elements in the sample are greter than 2.
+
+```{r}
+rand_samp_greater_than_2 = rand_samp > 2
+rand_samp_greater_than_2
+```
+
+The mean of the logical vector is `r mean(rand_samp_greater_than_2)`.
+
+Generate a character vector, which includes ten elements.
+```{r}
+rand_char = c("My", "name", "is", "Qinyao", "how", "are", "you", "nice", "weather", "today")
+
+```
+
+The mean of the character vector is `r mean(rand_char)`.
+
+
+```{r}
+rand_factor = factor(c("january", "february", "march", "april", "may", "june", "july", "august", "semptember", "october"))
+rand_factor
+
+```
+
+```{r}
 
 ```
 
