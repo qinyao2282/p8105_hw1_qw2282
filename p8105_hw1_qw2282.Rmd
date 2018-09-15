@@ -52,8 +52,16 @@ df_plotting = tibble(
    num_from_logical = as.numeric(vec_compare),
    factor_from_logical = as.factor(vec_compare)
 )
+
 ```
 
+#Description of the dataset
+  This data set includes `r nrow(df_plotting)` rows and `r ncol(df_plotting)` columns. This data set includes three numerical vectors: x, y and a numerical coercion of the logical vector num_from_logical; one logical vector: vec_compare; one factor vector: factor_from_logical. The mean of x is `r mean(df_plotting$x)`. the median of x is `r median(df_plotting$x)`. The proportion of TRUE in the logical vector vec_compare is `r mean(df_plotting$vec_compare)`.
+  
+  
+```{r}
+
+```
 
 
 
