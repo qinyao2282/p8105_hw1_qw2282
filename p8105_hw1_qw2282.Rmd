@@ -1,5 +1,7 @@
 ---
 title: "p8105_hw1_qw2282"
+author: "Qinyao Wu"
+date: 2018-09-13
 output: github_document
 ---
 
@@ -60,8 +62,16 @@ df_plotting = tibble(
   
   
 ```{r}
+ggplot(df_plotting, aes(x = x, y = y, color = vec_compare)) + geom_point()
+ggsave("scatter_plot.pdf", height = 4, width = 6)
+
+
+ggplot(df_plotting, aes(x = x, y = y, color = num_from_logical)) + geom_point()
+ggplot(df_plotting, aes(x = x, y = y, color = factor_from_logical)) + geom_point()
 
 ```
 
+#Comment on the color scale
+  The color scales of all three plots are the same because the factor vectors and the logical vectors are coerced from the logical vectors. True is coerced to 1 and False is coerced to 0. As a result, all three plots are showing the same color scale. 
 
 
