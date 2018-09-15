@@ -48,10 +48,9 @@ When I convert the vector of characters first into factor and then into numerics
 df_plotting = tibble(
    x = rnorm(1000),
    y = rnorm(1000),
-   vec_logical_compare = (x + y) > 0,
-   
-   
-   
+   vec_compare = (x + y) > 0,
+   num_from_logical = as.numeric(vec_compare),
+   factor_from_logical = as.factor(vec_compare)
 )
 ```
 
