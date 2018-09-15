@@ -31,14 +31,25 @@ as.numeric(df_random_samp$rand_char)
 as.numeric(df_random_samp$rand_factor)
 ```
 
+Only the logicals and factors can be coerced into numericals. The characters cannot be converted and 'NA' is displayed for each element and a warning message poped out. 
+
+```{r results = 'hide'}
+as.numeric(as.factor(df_random_samp$rand_char))
+as.numeric(as.character(df_random_samp$rand_factor))
+```
+
+When I convert the vector of characters first into factor and then into numerics, the vector is successfully converted into numbers. However, when the vector of factors first being converted into characters and then into numerics, the coercion is unsuccessful and a warning message poped out. This is because the character cannot be coerced into numericals directly. 
+
+
 
 
 #Problem 2
-#```{r}
+```{r}
 df_plotting = tibble(
    x = rnorm(1000),
    y = rnorm(1000),
    vec_logical_compare = (x + y) > 0,
+   
    
    
 )
