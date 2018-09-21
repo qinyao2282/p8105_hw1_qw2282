@@ -83,8 +83,10 @@ df_plotting = tibble(
 ggplot(df_plotting, aes(x = x, y = y, color = vec_compare)) + geom_point()
 ggsave("scatter_plot.pdf", height = 4, width = 6)
 
-#Plot another two plots, colored by numerics and factors. 
+#Plot another two plots, colored by numericals. 
 ggplot(df_plotting, aes(x = x, y = y, color = num_from_logical)) + geom_point()
+
+#Plot another two plots, colored by factors.
 ggplot(df_plotting, aes(x = x, y = y, color = factor_from_logical)) + geom_point()
 
 ```
